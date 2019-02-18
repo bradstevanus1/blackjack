@@ -667,25 +667,25 @@ def recordScore(name, balance):
 def main():
     """ This program simulates the Casino game of Blackjack, otherwise known
     as 21. Created by Brad Stevanus for the ICS4UI class of 2018 """
-    # try:
-    print("Launched Blackjack.")
-    home = True # Home always runs
-    option = False # Option runs if you click options
-    win = getWindow()
-    name, balance = getScore() # Get paramter to login with new player before opening file later
-    while home == True:
-        home, game, option = homeScreen(win, name, balance)
-        if option == True:
-            name, balance, option, game = optionWindow(win, name, balance)
-        while game == True:
-            if balance < 10: # Minimum balance of $10 to start the game
-                balance = 10
-            balance, game = gameScreen(win, name, balance)
-    recordScore(name, balance) # Record new scores / quit under "name"
-    win.close()
-    print("Blackjack terminated. Progress Saved!")
-    # except:
-    print("Blackjack terminated. Data may be lost.")
+    try:
+        print("Launched Blackjack.")
+        home = True # Home always runs
+        option = False # Option runs if you click options
+        win = getWindow()
+        name, balance = getScore() # Get paramter to login with new player before opening file later
+        while home == True:
+            home, game, option = homeScreen(win, name, balance)
+            if option == True:
+                name, balance, option, game = optionWindow(win, name, balance)
+            while game == True:
+                if balance < 10: # Minimum balance of $10 to start the game
+                    balance = 10
+                balance, game = gameScreen(win, name, balance)
+        recordScore(name, balance) # Record new scores / quit under "name"
+        win.close()
+        print("Blackjack terminated. Progress Saved!")
+    except:
+        print("Blackjack terminated. Data may be lost.")
 
 if __name__ == "__main__":
     main()
