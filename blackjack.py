@@ -29,7 +29,7 @@ def undrawGraphics(var_dict): # Master undraw function for each window
 def getWindow(): # Open the containing game window
     win = GraphWin("Blackjack",800,600)
     win.setCoords(0,0,800,600)
-    background = Image(Point(400,300), "textures\\main_menu.gif")
+    background = Image(Point(400,300), "textures/main_menu.gif")
     background.draw(win)
     return win
 
@@ -105,11 +105,11 @@ def optionWindow(win, name, balance):
     cancelb.activate()
     quitb = Button(win, Point(755,565), 50, 50, "Quit")
     quitb.activate()
-    save_img = Image(Point(300,175), "textures\\button_save.gif")
+    save_img = Image(Point(300,175), "textures/button_save.gif")
     save_img.draw(win)
-    cancel_img = Image(Point(500,175), "textures\\button_cancel.gif")
+    cancel_img = Image(Point(500,175), "textures/button_cancel.gif")
     cancel_img.draw(win)
-    quit_img = Image(Point(755,565), "textures\\button_quit.gif")
+    quit_img = Image(Point(755,565), "textures/button_quit.gif")
     quit_img.draw(win)
     name, balance = getInput(win, name_ent, balance_ent, name, balance, saveb, cancelb, quitb)
     #exitOption(locals())
@@ -120,19 +120,19 @@ def optionWindow(win, name, balance):
 
 def homeScreen(win, name, balance):
     # Display the game homescreen
-    title_img = Image(Point(400,450), "textures\\title_blackjack.gif")
+    title_img = Image(Point(400,450), "textures/title_blackjack.gif")
     title_img.draw(win)
     playb = Button(win, Point(400,300), 150, 90, "Play Game!")
     playb.activate()
-    playb_img = Image(Point(400,300), "textures\\button_play-game.gif")
+    playb_img = Image(Point(400,300), "textures/button_play-game.gif")
     playb_img.draw(win)
     quitb = Button(win, Point(600,300), 150, 90, "Quit Game")
     quitb.activate()
-    quitb_img = Image(Point(600,300), "textures\\button_quit_main_menu.gif")
+    quitb_img = Image(Point(600,300), "textures/button_quit_main_menu.gif")
     quitb_img.draw(win)
     optionb = Button(win, Point(200,300), 150, 90, "Options")
     optionb.activate()
-    optionb_img = Image(Point(200,300), "textures\\button_options.gif")
+    optionb_img = Image(Point(200,300), "textures/button_options.gif")
     optionb_img.draw(win)
     statr = Rectangle(Point(200,100), Point(600,200))
     statr.setFill("gray")
@@ -161,33 +161,33 @@ def getVars(win):
     # Create buttons
     hit = Button(win,Point(100,75), 100, 75, "Hit")
     hit.activate()
-    hit_img = Image(Point(100,75), "textures\\button_hit.gif")
+    hit_img = Image(Point(100,75), "textures/button_hit.gif")
     hit_img.draw(win)
     stand = Button(win, Point(250,75), 100, 75, "Stand")
     stand.activate()
-    stand_img = Image(Point(250,75), "textures\\button_stand.gif")
+    stand_img = Image(Point(250,75), "textures/button_stand.gif")
     stand_img.draw(win)
     home = Button(win, Point(755,565), 50, 50, "Quit")
     home.activate()
-    home_img = Image(Point(755,565), "textures\\button_quit.gif")
+    home_img = Image(Point(755,565), "textures/button_quit.gif")
     home_img.draw(win)
     # Split not activate until doubles
     split = Button(win, Point(400,75), 100, 75, "Split")
-    split_img_off = Image(Point(400,75), "textures\\button_split_off.gif")
+    split_img_off = Image(Point(400,75), "textures/button_split_off.gif")
     split_img_off.draw(win)
     # Double not active unless total of 9, 10, or 11 (ORIGINAL CARDS ONLY)
     double = Button(win, Point(550,75), 100, 75, "Double Down")
-    double_img_off = Image(Point(550,75), "textures\\button_double-down_off.gif")
+    double_img_off = Image(Point(550,75), "textures/button_double-down_off.gif")
     double_img_off.draw(win)
     # Insurance not active unless the dealer's face-up card is an ace
     insurance = Button(win, Point(700,75), 100, 75, "Insurance")
-    insurance_img_off = Image(Point(700,75), "textures\\button_insurance_off.gif")
+    insurance_img_off = Image(Point(700,75), "textures/button_insurance_off.gif")
     insurance_img_off.draw(win)
     playerbox = Rectangle(Point(25,120), Point(775,320))
     playerbox.setOutline("orange")
     playerbox.setWidth(3)
     playerbox.draw(win)
-    deck_stack = Image(Point(500,420), "poker_cards\\Card Back.gif")
+    deck_stack = Image(Point(500,420), "poker_cards/Card Back.gif")
     deck_stack.draw(win)
     return (hit, stand, home, split, double, insurance, playerbox, deck_stack,
             hit_img, stand_img, split_img_off, double_img_off, insurance_img_off, home_img)
@@ -220,7 +220,7 @@ def showBet(win):
     bet_fill.draw(win)
     bet_confirm = Button(win, Point(400,250), 75, 50, "Confirm")
     bet_confirm.activate()
-    bet_confirm_img = Image(Point(399,250), "textures\\button_confirm.gif")
+    bet_confirm_img = Image(Point(399,250), "textures/button_confirm.gif")
     bet_confirm_img.draw(win)
     bet_value = Entry(Point(400,300), 10)
     bet_value.draw(win)
@@ -430,7 +430,7 @@ def callInsurance(win, bet, ddeck, home, balance, new_balance):
     ins_text.draw(win)
     ins_confirm = Button(win, Point(400,250), 75, 50, "Confirm")
     ins_confirm.activate()
-    ins_confirm_img = Image(Point(400,250), "textures\\button_confirm.gif")
+    ins_confirm_img = Image(Point(400,250), "textures/button_confirm.gif")
     ins_confirm_img.draw(win)
     if ddeck["dcard1"].BJValue() == 10: # If the facedown card is a 10, insurance is paid out
         ddeck["dcard1"].faceup(win) # If dealer blackjack, insurance paid out 2:1
@@ -457,11 +457,11 @@ def endScreen(win):
     rectbar.draw(win)
     cont = Button(win, Point(380,375), 100, 75, "Continue")
     cont.activate()
-    cont_img = Image(Point(380,375), "textures\\button_continue_big.gif")
+    cont_img = Image(Point(380,375), "textures/button_continue_big.gif")
     cont_img.draw(win)
     backhome = Button(win, Point(515, 375), 100, 75, "Home")
     backhome.activate()
-    backhome_img = Image(Point(515, 375), "textures\\button_main-menu.gif")
+    backhome_img = Image(Point(515, 375), "textures/button_main-menu.gif")
     backhome_img.draw(win)
     return cont, backhome, rectbar, cont_img, backhome_img
 
@@ -563,15 +563,15 @@ def gameScreen(win, name, balance):  # Master game function
                 break
             if option.count("insurance") == 1:
                 insurance.activate()
-                insurance_img = Image(Point(700,75), "textures\\button_insurance.gif")
+                insurance_img = Image(Point(700,75), "textures/button_insurance.gif")
                 insurance_img.draw(win)
             if option.count("split") == 1:
                 split.activate()
-                split_img = Image(Point(400,75), "textures\\button_split.gif")
+                split_img = Image(Point(400,75), "textures/button_split.gif")
                 split_img.draw(win)
             if option.count("double") == 1:
                 double.activate()
-                double_img = Image(Point(550,75), "textures\\button_double-down.gif")
+                double_img = Image(Point(550,75), "textures/button_double-down.gif")
                 double_img.draw(win)
         #--------------------------PLAYER TURN----------------------------------
         pt = win.getMouse()
@@ -667,25 +667,25 @@ def recordScore(name, balance):
 def main():
     """ This program simulates the Casino game of Blackjack, otherwise known
     as 21. Created by Brad Stevanus for the ICS4UI class of 2018 """
-    try:
-        print("Launched Blackjack.")
-        home = True # Home always runs
-        option = False # Option runs if you click options
-        win = getWindow()
-        name, balance = getScore() # Get paramter to login with new player before opening file later
-        while home == True:
-            home, game, option = homeScreen(win, name, balance)
-            if option == True:
-                name, balance, option, game = optionWindow(win, name, balance)
-            while game == True:
-                if balance < 10: # Minimum balance of $10 to start the game
-                    balance = 10
-                balance, game = gameScreen(win, name, balance)
-        recordScore(name, balance) # Record new scores / quit under "name"
-        win.close()
-        print("Blackjack terminated. Progress Saved!")
-    except:
-        print("Blackjack terminated. Data may be lost.")
+    # try:
+    print("Launched Blackjack.")
+    home = True # Home always runs
+    option = False # Option runs if you click options
+    win = getWindow()
+    name, balance = getScore() # Get paramter to login with new player before opening file later
+    while home == True:
+        home, game, option = homeScreen(win, name, balance)
+        if option == True:
+            name, balance, option, game = optionWindow(win, name, balance)
+        while game == True:
+            if balance < 10: # Minimum balance of $10 to start the game
+                balance = 10
+            balance, game = gameScreen(win, name, balance)
+    recordScore(name, balance) # Record new scores / quit under "name"
+    win.close()
+    print("Blackjack terminated. Progress Saved!")
+    # except:
+    print("Blackjack terminated. Data may be lost.")
 
 if __name__ == "__main__":
     main()

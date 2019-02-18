@@ -32,7 +32,7 @@ class Card:
         self.p1 = Point(self.xmin,self.ymin)
         self.p2 = Point(self.xmax,self.ymax)
         self.name = self.__str__()
-        self.image = "poker_cards\{0}.gif".format(self.name)
+        self.image = "poker_cards/{0}.gif".format(self.name)
         self.showface = True
 
     def getRank(self):
@@ -110,7 +110,7 @@ class Card:
         "Sets the card to face down"
         if self.showface == True:
             self.cardface.undraw()
-            self.cardface = Image(self.center, "poker_cards\\Card Back.gif")
+            self.cardface = Image(self.center, "poker_cards/Card Back.gif")
             self.cardface.draw(win)
         self.showface = False
 
