@@ -32,6 +32,6 @@ Winning a round!
 
 ![Screenshot from 2021-05-04 16-11-47](https://user-images.githubusercontent.com/43410999/117063942-872f8180-acf3-11eb-9b45-d8936fb110ab.png)
 
-Changing the player's name and balance.
+Change the player's name and balance.
 
-![Screenshot from 2021-05-04 16-54-14](https://user-images.githubusercontent.com/43410999/117068512-5fdbb300-acf9-11eb-8923-ee959c3545e0.png)
+![Screenshot from 2021-05-04 16-56-00](https://user-images.githubusercontent.com/43410999/117068702-a204f480-acf9-11eb-88f1-c9a9d5a7567b.png)
