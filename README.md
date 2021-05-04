@@ -4,6 +4,7 @@ Test your luck by playing rounds of Blackjack against the dealer!
 
 ## How to run
 <ol>
+  <li>Clone the repo</li>
   <li>Open up your favourite terminal and navigate to the root of this repo</li>
   <li>Run <code>python main.py</code> or <code>python3 main.py</code> to run the game</li>
 </ol>
