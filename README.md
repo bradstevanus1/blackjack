@@ -1,3 +1,4 @@
+
 # Blackjack
 
 Test your luck by playing rounds of Blackjack against the dealer!
@@ -27,6 +28,10 @@ Hit, stand, split, double down, or take insurance.
 
 ![Screenshot from 2021-05-04 16-07-51](https://user-images.githubusercontent.com/43410999/117063482-e640c680-acf2-11eb-9a13-38f6bbd177af.png)
 
-Winning a round.
+Winning a round!
 
 ![Screenshot from 2021-05-04 16-11-47](https://user-images.githubusercontent.com/43410999/117063942-872f8180-acf3-11eb-9b45-d8936fb110ab.png)
+
+Changing the player's name and balance.
+
+![Screenshot from 2021-05-04 16-54-14](https://user-images.githubusercontent.com/43410999/117068512-5fdbb300-acf9-11eb-8923-ee959c3545e0.png)
