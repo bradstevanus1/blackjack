@@ -10,9 +10,9 @@ Test your luck by playing rounds of Blackjack against the dealer!
   <li>Run <code>python main.py</code> or <code>python3 main.py</code> to run the game</li>
 </ol>
 
-<strong>Note:</strong> The command above may throw an error if tkinter is not installed. tkinter can be installed on Debian-based systems with `sudo apt install python3-tk`
+<strong>Note:</strong> The command above may throw an error if tkinter is not installed. tkinter can be installed on Debian-based systems with <code>sudo apt install python3-tk</code>
 
-Stats like the player's balance and name are only saved if the game exits gracefully via the `Quit` button.
+Stats like the player's balance and name are only saved if the game exits gracefully via the <code>Quit</code> button.
 
 ## Screenshots
 
